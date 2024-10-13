@@ -1,0 +1,19 @@
+{
+  "name": "simple-nodejs-api",
+  "version": "1.0.0",
+  "description": "proyecto personal api nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.mjs"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "oscarreyes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

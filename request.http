@@ -14,3 +14,13 @@ Content-Type: application/json
     "author": "camila galvez",
     "year": 1999
 }
+
+###
+PUT http://localhost:3000/books/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tittle": "101 años de soledad",
+    "author": "camila ",
+    "year": 1999
+}

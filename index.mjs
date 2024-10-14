@@ -46,6 +46,19 @@ app.post("/books", (req, res) => {
     res.json(newBook);
 });
 
+app.put("/books/:id", (req,res) => {
+    const data = readData();
+    const body = req.body;
+    const id = parseInt(req.params.id);
+    const bookIndex = data.books.findIndex((book) => book.id === id);
+    data.books[bookIndex] = {
+        ...data.books[bookIndex],
+        ...body,
+    };
+    writeData(data);
+    res.json({message: "Se actualizó el libro"})
+});
+
 app.get("/", (req, res) =>{
     res.send("Welcome to my firts api on nodejs");
 });

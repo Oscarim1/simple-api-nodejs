@@ -1,17 +1,1 @@
-{
-    "books":[
-       {
-          "id":1,
-          "name":"Los 7 hábitos de la gente altamente efectiva",
-          "author":"Stephen R. Covey",
-          "year":1989
-       },
-       {
-          "id":2,
-          "name":"Padre rico, padre pobre",
-          "author":"Robert Kiyosaki",
-          "year":1997
-       }
-    ]
-}
-  
+{"dogs":[{"id":1,"dog_name":"Firulais","owner":"Nicolas tapia","address":"calle sin numero","phone":"+56912312312"},{"id":2,"dog_name":"doggi","owner":"Matias tapia","address":"calle sin numero","phone":"+56912312312"},{"id":3,"dog_name":"pepito 5","owner":"maxitoooo","address":"calle sin numero2","phone":"+56912312312"},{"id":4,"dog_name":"pepe","owner":"Nicolas tapia","address":"calle sin numero2","phone":"+56912312312"},{"id":5,"dog_name":"pepito 2","owner":"Nicolas tapia","address":"calle sin numero2","phone":"+56912312312"}]}

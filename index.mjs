@@ -22,41 +22,41 @@ const writeData = (data) => {
     }
 }
 
-app.get("/books", (req, res) => {
+app.get("/dogs", (req, res) => {
     const data = readData();
-    res.json(data.books);
+    res.json(data.dogs);
 });
 
-app.get("/books/:id", (req, res) => {
+app.get("/dogs/:id", (req, res) => {
     const data = readData();
     const id = parseInt(req.params.id);
-    const book = data.books.find((book) => book.id === id);
-    res.json(book);
+    const dog = data.dogs.find((dog) => dog.id === id);
+    res.json(dog);
 });
 
-app.post("/books", (req, res) => {
+app.post("/dogs", (req, res) => {
     const data = readData();
     const body = req.body;
-    const newBook = {
-        id: data.books.length + 1,
+    const newDog = {
+        id: data.dogs.length + 1,
         ...body,
     };
-    data.books.push(newBook);
+    data.dogs.push(newDog);
     writeData(data);
-    res.json(newBook);
+    res.json(newDog);
 });
 
-app.put("/books/:id", (req,res) => {
+app.put("/dogs/:id", (req,res) => {
     const data = readData();
     const body = req.body;
     const id = parseInt(req.params.id);
-    const bookIndex = data.books.findIndex((book) => book.id === id);
-    data.books[bookIndex] = {
-        ...data.books[bookIndex],
+    const dogIndex = data.dogs.findIndex((dog) => dog.id === id);
+    data.dogs[dogIndex] = {
+        ...data.dogs[dogIndex],
         ...body,
     };
     writeData(data);
-    res.json({message: "Se actualizó el libro"})
+    res.json({message: "Se actualizó el registro del perrito"})
 });
 
 app.get("/", (req, res) =>{
